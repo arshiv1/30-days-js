@@ -1,0 +1,30 @@
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgb(46, 46, 46);
+    color: rgb(214, 214, 214);
+    align-items: center;
+}
+
+.drum-kit{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+button{
+    padding: 15px 26px;
+    background-color: silver;
+    border: none;
+    border-radius: 8px;
+    color: rgb(35, 35, 35);
+    font-size: 30px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(240, 240, 240);
+    color: rgb(27, 27, 27);
+}
