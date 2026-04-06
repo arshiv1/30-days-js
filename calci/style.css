@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #22252D;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.viewing-mode-div{
+    margin: 30px auto auto auto;
+    background-color: #292D36;
+    border-radius: 20px;
+    padding: 8px 16px;
+    display: flex;
+    gap: 15px;
+}
+
+.viewing-mode-div button{
+    background : transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.viewing-mode-div .darkmode-btn{
+    opacity: 1;;
+}
+
+.input-div{
+    width: 100%;
+    padding: 0 30px;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.input-field{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #999;
+    font-size: 1.5rem;
+    text-align: right;
+    margin-bottom: 5px;
+    outline: none;
+    pointer-events: none;
+}
+
+.output-div{
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+    min-height: 75px;
+    line-height: 1;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.buttons-div{
+    flex-grow: 1;
+    background-color: #292D36;
+    border-radius: 35px 35px 0 0;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    align-content: flex-start;
+}
+
+.buttons{
+    background-color: #272B33;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.1s ease;
+}
+
+.buttons:active{
+    background-color: #3B404B;
+}
+
+.text-green {
+    color: #26E0B0;
+}
+
+.text-red {
+    color: #EA6666;
+}
+
+
+/* --- Light Theme Overrides --- */
+
+/* Main background becomes white */
+.calculator-wrapper.light-theme {
+    background-color: #FFFFFF;
+}
+
+/* Theme toggle pill background */
+.calculator-wrapper.light-theme .viewing-mode-div {
+    background-color: #F0F2F5;
+}
+
+/* Theme toggle icons become dark */
+.calculator-wrapper.light-theme .viewing-mode-div button {
+    color: #22252D;
+}
+
+/* Top expression text becomes darker grey */
+.calculator-wrapper.light-theme .input-field {
+    color: #666666;
+}
+
+/* Main result text becomes very dark */
+.calculator-wrapper.light-theme .output-div {
+    color: #22252D;
+}
+
+/* Keypad background becomes off-white */
+.calculator-wrapper.light-theme .buttons-div {
+    background-color: #F9F9F9;
+}
+
+/* Buttons become light grey with dark text */
+.calculator-wrapper.light-theme .buttons {
+    background-color: #F0F2F5;
+    color: #22252D;
+}
+
+/* Button click effect for light mode */
+.calculator-wrapper.light-theme .buttons:active {
+    background-color: #E0E4E9; 
+}
+
+/* When light mode is active, make the sun fully visible */
+.calculator-wrapper.light-theme .lightmode-btn {
+    opacity: 1;
+}
+
+/* When light mode is active, dim the moon */
+.calculator-wrapper.light-theme .darkmode-btn {
+    opacity: 0.5;
+}
