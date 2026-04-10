@@ -1,0 +1,125 @@
+main{
+    position: relative;
+    margin-top: 60px;
+    margin-left: 255px;
+    margin-right: 20px;
+    margin-bottom: 100px;
+    overflow-x: hidden;
+}
+
+.suggestion-bar{
+    position: absolute;
+    top: 10px;
+    left : 4px;
+
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.suggestions{
+    color: white;
+    background-color: rgba(246, 246, 246, 0.15);
+
+    margin-right: 10px;
+    padding: 7px 14px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.suggestions:hover{
+    cursor: pointer;
+    background-color: rgb(78, 77, 77);
+}
+
+.suggestions:first-child{
+    color: black;
+    background-color: white;
+}
+
+.suggestion-bar::-webkit-scrollbar{
+    display: none;
+}
+
+
+.video-grid{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+@media(min-width : 750px){
+    .video-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width : 1000px){
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media(min-width: 751px) and (max-width : 999px){
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.thumbnail{
+    width: 100%;
+}
+
+.thumbnail-row{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.video-time{
+    position: absolute;
+    right: 4px;
+    bottom: 8px;
+    color: white;
+    background-color: rgb(16,16,16);
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px;
+}
+
+.video-info-grid{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.channel-picture{
+    width: 37px;
+    border-radius: 50%;
+}
+.channel-picture-div{
+    vertical-align: top;
+}
+
+.video-title{
+    color: white;
+    margin-top: 0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.video-author, .video-status{
+    color: rgb(164, 164, 164);
+    font-size: 12px;
+    font-weight: 400;
+}
+.video-author{
+    margin-bottom: 4px;
+}
+
